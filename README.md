@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <b>🌐 Languages:</b> <a href="README.md">English</a> · <a href="README.zh-CN.md">中文</a>
+**🌐 Languages:** [English](README.md) · [中文](README.zh-CN.md)
 </p>
 
 > **CampusPilot** — an AI-powered campus interactive platform for XJTLU students and faculty.
