@@ -1,0 +1,46 @@
+{
+  "professors": [
+    {
+      "id": "prof_1",
+      "name": "赵敏教授",
+      "faculty": "智能工程学院",
+      "title": "教授、博士生导师",
+      "research": "自然语言处理、大语言模型的可信评估与对齐",
+      "education": "清华大学计算机博士，曾任微软亚洲研究院研究员",
+      "papers": [
+        "ACL 2024: Hallucination Detection in LLM",
+        "EMNLP 2023: Controllable Text Generation",
+        "NeurIPS 2022: Few-shot Prompting"
+      ],
+      "xjtlu_url": "https://www.xjtlu.edu.cn/",
+      "tags": [
+        "NLP",
+        "大模型",
+        "AI可信"
+      ],
+      "avatar": "赵",
+      "statement": "目前课题组开放2026暑期研究实习名额（2-3名），欢迎对NLP感兴趣的同学加入。"
+    },
+    {
+      "id": "prof_2",
+      "name": "张明教授",
+      "faculty": "智能工程学院",
+      "title": "副教授",
+      "research": "计算机视觉、自动驾驶感知、多模态学习",
+      "education": "浙江大学博士，曾于商汤科技从事CV研究",
+      "papers": [
+        "CVPR 2024: 3D Object Detection",
+        "ICCV 2023: Multi-modal Fusion",
+        "ECCV 2022: Self-supervised Depth"
+      ],
+      "xjtlu_url": "https://www.xjtlu.edu.cn/",
+      "tags": [
+        "计算机视觉",
+        "自动驾驶",
+        "深度学习"
+      ],
+      "avatar": "张",
+      "statement": "正在进行CV论文复现学习小组招募，12周计划覆盖经典网络。适合想入门CV方向的同学。"
+    }
+  ]
+}

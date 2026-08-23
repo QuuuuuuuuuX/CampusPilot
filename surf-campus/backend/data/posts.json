@@ -1,0 +1,260 @@
+{
+  "posts": [
+    {
+      "id": "p1",
+      "title": "求 CSE101 期末复习资料和往年试题",
+      "content": "马上期末了，有没有学长学姐分享下CSE101的复习资料和往年试卷？万分感谢！🙏",
+      "section": "academic",
+      "anonymous": false,
+      "author": "小明同学",
+      "time": "2026-08-09 14:30",
+      "likes": 12,
+      "comments_count": 3,
+      "tags": [
+        "CSE101",
+        "期末复习",
+        "资料"
+      ],
+      "media": [],
+      "liked": false,
+      "collected": false,
+      "comments": [
+        {
+          "author": "助教Amy",
+          "content": "建议重点复习数组操作、链表和排序算法部分，去年大题考了二叉树遍历。",
+          "time": "2026-08-09 15:00",
+          "likes": 5
+        },
+        {
+          "author": "学长小李",
+          "content": "E-bridge上有往年试卷，搜CSE101 past paper就行。",
+          "time": "2026-08-09 16:20",
+          "likes": 3
+        },
+        {
+          "author": "同班小王",
+          "content": "同求！如果有整理好的笔记就更好了！",
+          "time": "2026-08-09 18:00",
+          "likes": 1
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "图书馆B2自习区wifi信号太差了",
+      "content": "最近在图书馆B2层自习，发现靠窗户那排座位的校园网信号非常不稳定。有没有遇到同样情况的同学？",
+      "section": "campus-life",
+      "anonymous": true,
+      "author": "匿名同学",
+      "time": "2026-08-09 11:20",
+      "likes": 8,
+      "comments_count": 1,
+      "tags": [
+        "图书馆",
+        "校园网"
+      ],
+      "media": [],
+      "liked": false,
+      "collected": false,
+      "comments": [
+        {
+          "author": "图书馆常客",
+          "content": "我前天也遇到了，靠窗第三排完全连不上。已经提交IT工单了，说是这周维修。",
+          "time": "2026-08-09 12:00",
+          "likes": 2
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "2026 RoboMaster战队补强招募",
+      "content": "西浦RoboMaster战队新赛季补强中！急需嵌入式开发（STM32）1名，机械设计1名。已获学校20,000元启动资金，目标分区赛八强。",
+      "section": "teams",
+      "anonymous": false,
+      "author": "陈工",
+      "time": "2026-08-09 09:00",
+      "likes": 15,
+      "comments_count": 4,
+      "tags": [
+        "RoboMaster",
+        "组队",
+        "嵌入式"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "url": "https://placehold.co/600x300/236984/white?text=RoboMaster"
+        }
+      ],
+      "liked": false,
+      "collected": false,
+      "comments": [
+        {
+          "author": "机械萌新",
+          "content": "零基础可以吗？对SolidWorks会一点，想试试机械设计方向。",
+          "time": "2026-08-09 09:30",
+          "likes": 4
+        },
+        {
+          "author": "陈工",
+          "content": "零基础没关系，只要愿意学。每周三次集训，周末可以单独补课。",
+          "time": "2026-08-09 10:00",
+          "likes": 6
+        },
+        {
+          "author": "大三学长",
+          "content": "校队氛围很好，技术可以慢慢学，关键是有热情和毅力。",
+          "time": "2026-08-09 10:30",
+          "likes": 3
+        },
+        {
+          "author": "嵌入式爱好者",
+          "content": "STM32我有经验，做过平衡车项目，怎么联系？",
+          "time": "2026-08-09 11:00",
+          "likes": 2
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "交换到南洋理工的体验 — AMA",
+      "content": "上个学期去NTU交换了一学期，整体体验超乎预期。对交换/留学规划有疑问的同学欢迎提问！",
+      "section": "campus-life",
+      "anonymous": false,
+      "author": "李华",
+      "time": "2026-08-08 17:45",
+      "likes": 24,
+      "comments_count": 6,
+      "tags": [
+        "交换",
+        "NTU",
+        "留学"
+      ],
+      "media": [],
+      "liked": false,
+      "collected": false,
+      "comments": [
+        {
+          "author": "准大三",
+          "content": "请问申请交换需要什么条件？GPA大概要多少？",
+          "time": "2026-08-08 18:00",
+          "likes": 8
+        },
+        {
+          "author": "李华",
+          "content": "NTU要求GPA3.0+，雅思6.5或托福90。西浦交换名额每年有5-8个。",
+          "time": "2026-08-08 18:30",
+          "likes": 12
+        },
+        {
+          "author": "大一新生",
+          "content": "大一可以申请吗？还是建议大二大三再考虑？",
+          "time": "2026-08-08 19:00",
+          "likes": 5
+        },
+        {
+          "author": "李华",
+          "content": "建议大二下学期或大三申请，这样课程衔接比较顺畅。大一的同学可以先关注GPA。",
+          "time": "2026-08-08 19:30",
+          "likes": 7
+        },
+        {
+          "author": "路人甲",
+          "content": "NTU的食堂和住宿怎么样？听说宿舍超豪华！",
+          "time": "2026-08-08 20:00",
+          "likes": 6
+        },
+        {
+          "author": "李华",
+          "content": "宿舍确实不错，双人间带独立卫浴，食堂选择很多而且价格便宜。强烈推荐！",
+          "time": "2026-08-08 20:30",
+          "likes": 9
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "数学建模竞赛：3=1急缺MATLAB高手",
+      "content": "我们3人已组好队，有编程和写作搭档，急缺一位MATLAB/Python建模能力强的同学加入。目标国一！",
+      "section": "teams",
+      "anonymous": false,
+      "author": "王小明",
+      "time": "2026-08-08 15:00",
+      "likes": 6,
+      "comments_count": 2,
+      "tags": [
+        "数学建模",
+        "组队",
+        "MATLAB"
+      ],
+      "media": [],
+      "liked": false,
+      "collected": false,
+      "comments": [
+        {
+          "author": "建模达人",
+          "content": "我会MATLAB和Python，参加过两次国赛，怎么联系？",
+          "time": "2026-08-08 15:30",
+          "likes": 3
+        },
+        {
+          "author": "王小明",
+          "content": "太棒了！加我微信wangxiaoming_xjtlu，我们赛前每周三次模拟训练。",
+          "time": "2026-08-08 16:00",
+          "likes": 2
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "分享一个超好用的Zotero文献管理配置",
+      "content": "最近把Zotero的文献管理流彻底搭好了，写论文效率直接翻倍。需要自取！",
+      "section": "academic",
+      "anonymous": false,
+      "author": "文献管理爱好者",
+      "time": "2026-08-08 10:00",
+      "likes": 18,
+      "comments_count": 5,
+      "tags": [
+        "Zotero",
+        "文献",
+        "效率工具"
+      ],
+      "media": [],
+      "liked": false,
+      "collected": false,
+      "comments": [
+        {
+          "author": "研究生",
+          "content": "终于有人分享Zotero配置了！我一直在用EndNote但感觉太重了。",
+          "time": "2026-08-08 10:30",
+          "likes": 4
+        },
+        {
+          "author": "文献管理爱好者",
+          "content": "确实，Zotero配合ZotFile和OneDrive同步超方便，而且完全免费。",
+          "time": "2026-08-08 11:00",
+          "likes": 5
+        },
+        {
+          "author": "毕业论文党",
+          "content": "求Notion链接！正在写毕业论文，文献管理完全一团乱。",
+          "time": "2026-08-08 11:30",
+          "likes": 3
+        },
+        {
+          "author": "文献管理爱好者",
+          "content": "Notion链接在个人主页置顶了，有详细配置步骤和常见问题解答。",
+          "time": "2026-08-08 12:00",
+          "likes": 4
+        },
+        {
+          "author": "学术萌新",
+          "content": "收藏了！下学期开始跟导师做项目正好需要。",
+          "time": "2026-08-08 13:00",
+          "likes": 2
+        }
+      ]
+    }
+  ]
+}

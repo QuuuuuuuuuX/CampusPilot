@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SURF Campus</title>
+  <link rel="stylesheet" href="demo.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="demo.js" defer></script>
+</head>
+<body class="auth-pending">
+  <main class="login-experience" id="login-experience" data-mood="idle" aria-label="登录 SURF Campus">
+    <section class="mascot-stage" aria-label="SURF Campus 欢迎场景">
+      <a class="login-brand" href="/" aria-label="SURF Campus 首页">
+        <span class="login-brand-mark" aria-hidden="true">S</span>
+        <span><strong>SURF</strong><small>Campus</small></span>
+      </a>
+
+      <div class="mascot-copy">
+        <span>YOUR CAMPUS, IN MOTION</span>
+        <h1>Meet campus.<br>Find your people.</h1>
+      </div>
+
+      <div class="mascot-scene" id="mascot-scene" aria-hidden="true">
+        <div class="mascot mascot-purple" data-mascot="purple">
+          <div class="mascot-feedback"><div class="mascot-body">
+            <div class="mascot-face"><span class="eye"><span class="pupil"></span></span><span class="eye"><span class="pupil"></span></span><span class="mouth"></span></div>
+            <span class="arm arm-left"><span class="palm"></span></span><span class="arm arm-right"><span class="palm"></span></span>
+          </div></div>
+        </div>
+        <div class="mascot mascot-black" data-mascot="black">
+          <div class="mascot-feedback"><div class="mascot-body">
+            <div class="mascot-face"><span class="eye"><span class="pupil"></span></span><span class="eye"><span class="pupil"></span></span><span class="mouth"></span></div>
+            <span class="arm arm-left"><span class="palm"></span></span><span class="arm arm-right"><span class="palm"></span></span>
+          </div></div>
+        </div>
+        <div class="mascot mascot-yellow" data-mascot="yellow">
+          <div class="mascot-feedback"><div class="mascot-body">
+            <div class="mascot-face"><span class="eye"><span class="pupil"></span></span><span class="eye"><span class="pupil"></span></span><span class="mouth"></span></div>
+            <span class="arm arm-left"><span class="palm"></span></span><span class="arm arm-right"><span class="palm"></span></span>
+          </div></div>
+        </div>
+        <div class="mascot mascot-orange" data-mascot="orange">
+          <div class="mascot-feedback"><div class="mascot-body">
+            <div class="mascot-face"><span class="eye"><span class="pupil"></span></span><span class="eye"><span class="pupil"></span></span><span class="mouth"></span></div>
+            <span class="arm arm-left"><span class="palm"></span></span><span class="arm arm-right"><span class="palm"></span></span>
+          </div></div>
+        </div>
+      </div>
+
+      <footer class="login-stage-footer"><button type="button" data-login-policy="privacy">Privacy</button><button type="button" data-login-policy="terms">Terms</button><span>Made for XJTLU</span></footer>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-card">
+        <div class="login-heading" id="login-heading">
+          <span class="login-kicker">SURF CAMPUS</span>
+          <h2>Welcome back!</h2>
+          <p>Please enter your details</p>
+        </div>
+
+        <div class="login-switch" role="tablist" aria-label="登录方式">
+          <button class="is-active" id="phone-login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-phone-form" data-login-mode="phone"><i data-lucide="smartphone"></i><span>手机号</span></button>
+          <button id="email-login-tab" type="button" role="tab" aria-selected="false" aria-controls="email-login-form" data-login-mode="email"><i data-lucide="mail"></i><span>Email</span></button>
+        </div>
+
+        <form class="login-form" id="email-login-form" novalidate>
+          <div class="login-field">
+            <label for="login-email">Email</label>
+            <div class="login-input-wrap"><i data-lucide="mail" aria-hidden="true"></i><input id="login-email" name="email" type="email" autocomplete="email" placeholder="you@xjtlu.edu.cn" required></div>
+          </div>
+          <div class="login-field">
+            <div class="login-label-row"><label for="login-password">Password</label><button class="login-text-button" type="button" id="forgot-password">Forgot password?</button></div>
+            <div class="login-input-wrap"><i data-lucide="lock-keyhole" aria-hidden="true"></i><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" minlength="6" required><button class="password-toggle" id="password-toggle" type="button" aria-label="显示密码" aria-pressed="false"><i data-lucide="eye"></i></button></div>
+          </div>
+          <div class="login-options">
+            <label class="remember-control"><input id="remember-login" name="remember" type="checkbox" checked><span aria-hidden="true"><i data-lucide="check"></i></span>在此设备保持登录</label>
+          </div>
+          <p class="login-message" id="email-login-message" aria-live="polite"></p>
+          <button class="login-submit" type="submit"><span>Log in</span><i data-lucide="arrow-right"></i></button>
+          <button class="login-alternate" type="button" data-login-mode="phone"><i data-lucide="smartphone"></i><span>使用手机号登录</span></button>
+        </form>
+
+        <form class="login-form" id="email-register-form" hidden novalidate>
+          <div class="login-field">
+            <label for="register-email">邮箱地址</label>
+            <div class="login-input-wrap"><i data-lucide="mail" aria-hidden="true"></i><input id="register-email" name="email" type="email" autocomplete="email" placeholder="you@xjtlu.edu.cn" required></div>
+          </div>
+          <div class="login-field">
+            <label for="register-email-code">邮箱验证码</label>
+            <div class="login-input-wrap login-code-wrap"><i data-lucide="mail-check" aria-hidden="true"></i><input id="register-email-code" name="code" inputmode="numeric" autocomplete="one-time-code" placeholder="6 位验证码" minlength="6" maxlength="6" required><button class="send-code-button" id="send-email-code" type="button">获取验证码</button></div>
+          </div>
+          <div class="login-field">
+            <label for="register-password">设置密码</label>
+            <div class="login-input-wrap"><i data-lucide="lock-keyhole" aria-hidden="true"></i><input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="至少 6 位字符" minlength="6" required></div>
+          </div>
+          <div class="login-field">
+            <label for="register-password-confirm">确认密码</label>
+            <div class="login-input-wrap"><i data-lucide="shield-check" aria-hidden="true"></i><input id="register-password-confirm" name="password-confirm" type="password" autocomplete="new-password" placeholder="再次输入密码" minlength="6" required></div>
+          </div>
+          <p class="login-message" id="email-register-message" aria-live="polite"></p>
+          <button class="login-submit" type="submit"><span>创建账号</span><i data-lucide="arrow-right"></i></button>
+          <button class="login-alternate" type="button" data-email-view="login"><i data-lucide="log-in"></i><span>已有账号？返回登录</span></button>
+        </form>
+
+        <form class="login-form" id="login-phone-form" hidden novalidate>
+          <div class="login-field">
+            <label for="login-phone">手机号</label>
+            <div class="login-input-wrap"><i data-lucide="smartphone" aria-hidden="true"></i><input id="login-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="11 位手机号" minlength="11" maxlength="11" required></div>
+          </div>
+          <div class="login-field">
+            <label for="login-code">短信验证码</label>
+            <div class="login-input-wrap login-code-wrap"><i data-lucide="message-square-key" aria-hidden="true"></i><input id="login-code" name="code" inputmode="numeric" autocomplete="one-time-code" placeholder="6 位验证码" minlength="6" maxlength="6" required><button class="send-code-button" id="send-code" type="button">获取验证码</button></div>
+            <p class="login-hint" style="margin-top:6px;font-size:12px;color:var(--text-soft);">提示：演示环境验证码为 <strong>123456</strong>，可直接输入登录。</p>
+          </div>
+          <label class="remember-control"><input id="remember-phone" name="remember" type="checkbox" checked><span aria-hidden="true"><i data-lucide="check"></i></span>在此设备保持登录</label>
+          <p class="login-message" id="phone-login-message" aria-live="polite"></p>
+          <button class="login-submit" type="submit"><span>手机号登录</span><i data-lucide="arrow-right"></i></button>
+          <button class="login-alternate" type="button" data-login-mode="email"><i data-lucide="mail"></i><span>使用邮箱登录</span></button>
+        </form>
+
+        <p class="login-signup">Don't have an account? <button type="button" id="create-account">Sign up</button></p>
+      </div>
+      <p class="login-security"><i data-lucide="shield-check"></i><span>Protected campus access</span></p>
+    </section>
+  </main>
+
+  <dialog class="login-dialog" id="password-reset-dialog">
+    <form id="password-reset-form" novalidate>
+      <div class="dialog-head"><div><span class="eyebrow">Account recovery</span><h2>找回邮箱密码</h2></div><button class="icon-button" type="button" data-close-login-dialog aria-label="关闭"><i data-lucide="x"></i></button></div>
+      <p class="dialog-note">验证码会发送到你的邮箱；本地演示环境会直接显示验证码。</p>
+      <label class="field-label" for="reset-email">邮箱地址</label><input class="field" id="reset-email" type="email" required placeholder="you@example.com">
+      <label class="field-label" for="reset-code">邮箱验证码</label><div class="login-input-wrap login-code-wrap"><input class="field" id="reset-code" inputmode="numeric" maxlength="6" required placeholder="6 位验证码"><button class="send-code-button" id="send-reset-code" type="button">获取验证码</button></div>
+      <label class="field-label" for="reset-password">新密码</label><input class="field" id="reset-password" type="password" minlength="6" required placeholder="至少 6 位字符">
+      <p class="login-message" id="reset-password-message" aria-live="polite"></p>
+      <button class="button login-submit" type="submit"><span>更新密码</span><i data-lucide="key-round"></i></button>
+    </form>
+  </dialog>
+
+  <dialog class="login-dialog" id="login-policy-dialog">
+    <div class="dialog-head"><div><span class="eyebrow" id="login-policy-eyebrow">SURF Campus</span><h2 id="login-policy-title">Privacy</h2></div><button class="icon-button" type="button" data-close-login-dialog aria-label="关闭"><i data-lucide="x"></i></button></div>
+    <div class="dialog-note" id="login-policy-content"></div>
+  </dialog>
+
+  <dialog class="profile-onboarding-dialog" id="profile-onboarding-dialog">
+    <form id="profile-onboarding-form" novalidate>
+      <div class="dialog-head"><div><span class="eyebrow">First login</span><h2>先认识一下你</h2></div></div>
+      <p class="dialog-note">设置一次公开资料，之后可以在设置中随时修改。生日只用于你的个人资料，不会出现在公共话题流。</p>
+      <div class="avatar-picker" role="radiogroup" aria-label="选择头像">
+        <label class="avatar-choice"><input type="radio" name="avatar" value="sun" checked><span class="avatar avatar-sun"><i data-lucide="sun"></i></span><small>晴日</small></label>
+        <label class="avatar-choice"><input type="radio" name="avatar" value="wave"><span class="avatar avatar-wave"><i data-lucide="waves"></i></span><small>海风</small></label>
+        <label class="avatar-choice"><input type="radio" name="avatar" value="leaf"><span class="avatar avatar-leaf"><i data-lucide="leaf"></i></span><small>新芽</small></label>
+        <label class="avatar-choice"><input type="radio" name="avatar" value="star"><span class="avatar avatar-star"><i data-lucide="star"></i></span><small>星光</small></label>
+        <label class="avatar-choice"><input type="radio" name="avatar" value="spark"><span class="avatar avatar-spark"><i data-lucide="sparkles"></i></span><small>灵感</small></label>
+        <label class="avatar-choice"><input type="radio" name="avatar" value="moon"><span class="avatar avatar-moon"><i data-lucide="moon"></i></span><small>月亮</small></label>
+      </div>
+      <label class="field-label" for="onboarding-username">用户名</label>
+      <input class="field" id="onboarding-username" name="username" maxlength="24" minlength="2" placeholder="别人会这样称呼你" required>
+      <label class="field-label" for="onboarding-bio">简介 <span class="field-hint">可选</span></label>
+      <textarea class="field" id="onboarding-bio" name="bio" maxlength="160" rows="3" placeholder="一句话介绍你的兴趣或正在做的事"></textarea>
+      <label class="field-label" for="onboarding-birthday">生日 <span class="field-hint">可选</span></label>
+      <input class="field" id="onboarding-birthday" name="birthday" type="date">
+      <p class="login-message" id="profile-onboarding-message" aria-live="polite"></p>
+      <button class="button login-submit" type="submit"><span>保存资料并进入校园</span><i data-lucide="arrow-right"></i></button>
+    </form>
+  </dialog>
+
+<div class="app-shell" id="app-shell" inert aria-hidden="true">
+  <aside class="sidebar">
+    <button class="brand" data-route="feed"><span class="brand-mark">S</span><span><strong>SURF</strong><small>Campus</small></span></button>
+    <nav class="primary-nav">
+      <button class="nav-item" data-route="feed"><i data-lucide="messages-square"></i><span>校园话题</span></button>
+      <button class="nav-item" data-route="treehole"><i data-lucide="lock-keyhole"></i><span>匿名树洞</span></button>
+      <button class="nav-item" data-route="events"><i data-lucide="calendar-days"></i><span>活动</span></button>
+      <button class="nav-item" data-route="opportunities"><i data-lucide="users-round"></i><span>组队招募</span></button>
+      <button class="nav-item" data-route="resources"><i data-lucide="book-open"></i><span>课程资料</span></button>
+      <button class="nav-item" data-route="qa"><i data-lucide="message-circle-question"></i><span>课程问答</span></button>
+      <button class="nav-item" data-route="teachers"><i data-lucide="graduation-cap"></i><span>教师咨询</span></button>
+      <button class="nav-item" data-route="directory"><i data-lucide="contact-round"></i><span>通讯录</span></button>
+      <button class="nav-item" data-route="notifications"><i data-lucide="bell"></i><span>通知</span></button>
+    </nav>
+    <button class="new-post-button" id="sidebar-compose"><i data-lucide="square-pen"></i><span>发布话题</span></button>
+    <button class="new-post-button ai-chat-button" id="sidebar-ai-chat"><i data-lucide="sparkles"></i><span>问问AI</span></button>
+    <div class="sidebar-foot">
+      <span class="identity-note"><i data-lucide="shield-check"></i>校内身份已验证<br><small>公开内容默认实名</small></span>
+      <div class="profile-button" id="sidebar-profile-btn" data-route="profile"><span class="avatar">张</span><span><strong>张三</strong><small>计算机科学 · 大三</small></span><i data-lucide="sliders-horizontal"></i></div>
+    </div>
+  </aside>
+  <main class="main-column">
+    <header class="topbar">
+      <span class="mobile-brand" data-route="feed"><span class="brand-mark">S</span><strong>SURF</strong></span>
+      <form class="global-search" id="global-search-form" role="search"><i data-lucide="search"></i><input id="global-search" type="search" placeholder="搜索话题、Tag、资料、问答或活动" data-i18n-placeholder="搜索话题、Tag、资料、问答或活动" autocomplete="off"><kbd>⌘K</kbd></form>
+      <div class="top-actions">
+        <button class="icon-button" id="theme-toggle" aria-label="深色模式"><i data-lucide="moon"></i></button>
+        <button class="icon-button lang-toggle-btn" id="lang-toggle" aria-label="切换语言 / Switch Language"><span class="lang-label" style="font-size:12px;font-weight:700">EN</span></button>
+        <button class="icon-button" data-route="notifications"><i data-lucide="bell"></i></button>
+        <div class="top-avatar-wrap">
+          <button class="avatar top-avatar" id="top-avatar-btn" aria-label="个人中心"><span class="avatar-circle">张</span></button>
+          <div class="profile-menu" id="profile-menu" style="display:none"></div>
+        </div>
+      </div>
+    </header>
+    <div class="content"><div class="view-root" id="view-root"></div></div>
+  </main>
+  <aside class="context-rail" id="hot-rail-root">
+    <div id="hot-rail"></div>
+  </aside>
+</div>
+<nav class="mobile-nav">
+  <button data-route="feed"><i data-lucide="messages-square"></i><span>话题</span></button>
+  <button data-route="notifications"><i data-lucide="bell"></i><span>通知</span></button>
+  <button class="mobile-compose" id="mobile-compose"><i data-lucide="plus"></i></button>
+  <button data-route="opportunities"><i data-lucide="users-round"></i><span>组队</span></button>
+  <button data-route="events"><i data-lucide="calendar-days"></i><span>活动</span></button>
+</nav>
+<div class="toast-region" id="toast-region"></div>
+<div id="publish-modal" style="display:none"></div>
+</body>
+</html>

@@ -1,0 +1,501 @@
+{
+  "opportunities": [
+    {
+      "id": "opp_1",
+      "title": "【互联网+红旅赛道】寻有过获奖经验的视觉设计合伙人",
+      "kind": "比赛招募",
+      "category": "competition",
+      "sub_category": "创新创业大赛",
+      "role_type": "核心成员",
+      "collab_mode": "冲刺型",
+      "ai_summary": "发起者张三是策略型领袖，已在去年省赛中获银奖。需要一个能独立完成品牌视觉、PPT美化和路演材料的设计伙伴。",
+      "skills": [
+        "UI/UX",
+        "视觉设计",
+        "获奖经验"
+      ],
+      "tags": [
+        "互联网+",
+        "红旅赛道"
+      ],
+      "deadline": "2026-08-20",
+      "capacity": 1,
+      "applications_count": 1,
+      "owner": "张三",
+      "initiator_profile": {
+        "collab_tags": [
+          "策略型领袖",
+          "高效执行者"
+        ],
+        "bio": "计算机大三"
+      },
+      "match_score": 92,
+      "match_reason": "匹配2/3项技能：UI/UX,视觉设计",
+      "my_application": null,
+      "detail_description": "本项目聚焦红旅赛道乡村振兴方向，通过数字化手段帮助农产品上行。团队已完成市场调研，产品MVP已搭建完毕。",
+      "team_members": [
+        {
+          "name": "张三",
+          "role": "产品经理/队长",
+          "skills": [
+            "产品规划",
+            "商业计划书"
+          ],
+          "style": "策略型领袖",
+          "avatar": "张"
+        },
+        {
+          "name": "陈工",
+          "role": "后端开发",
+          "skills": [
+            "Java",
+            "Spring Boot"
+          ],
+          "style": "稳健执行者",
+          "avatar": "陈"
+        },
+        {
+          "name": "刘同学",
+          "role": "前端开发",
+          "skills": [
+            "React",
+            "TypeScript"
+          ],
+          "style": "快速学习者",
+          "avatar": "刘"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "UI/UX设计",
+          "品牌视觉",
+          "演示文稿美化"
+        ],
+        "preferred_experience": "有竞赛获奖作品集优先",
+        "weekly_commitment": "8月每日4-6小时",
+        "team_fit": "团队氛围扁平直接，问题不过夜。"
+      },
+      "team_culture": "🔴 高速冲刺·目标导向·开放直接"
+    },
+    {
+      "id": "opp_2",
+      "title": "【全国大学生数学建模竞赛】3=1求建模达人",
+      "kind": "比赛招募",
+      "category": "competition",
+      "sub_category": "数学建模大赛",
+      "role_type": "核心成员",
+      "collab_mode": "冲刺型",
+      "ai_summary": "王小明已有编程和写作搭档，急缺一位能快速建立数学模型的队友。",
+      "skills": [
+        "数学建模",
+        "MATLAB",
+        "Python",
+        "优化算法"
+      ],
+      "tags": [
+        "数学建模",
+        "国赛"
+      ],
+      "deadline": "2026-08-25",
+      "capacity": 1,
+      "applications_count": 0,
+      "owner": "王小明",
+      "initiator_profile": {
+        "collab_tags": [
+          "数据驱动者",
+          "快速学习者"
+        ],
+        "bio": "数据科学大三"
+      },
+      "match_score": 25,
+      "match_reason": "匹配1/4项技能：Python",
+      "my_application": null,
+      "detail_description": "目标冲击国家一等奖。计划赛前进行6次全真模拟训练。",
+      "team_members": [
+        {
+          "name": "王小明",
+          "role": "编程/队长",
+          "skills": [
+            "Python",
+            "MATLAB"
+          ],
+          "style": "数据驱动者",
+          "avatar": "王"
+        },
+        {
+          "name": "赵同学",
+          "role": "写作/排版",
+          "skills": [
+            "LaTeX",
+            "学术写作"
+          ],
+          "style": "严谨型写手",
+          "avatar": "赵"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "数学建模",
+          "微分方程",
+          "优化理论"
+        ],
+        "preferred_experience": "有竞赛经验优先",
+        "weekly_commitment": "赛前每周3次训练",
+        "team_fit": "训练时互相挑刺但不伤感情。"
+      },
+      "team_culture": "📐 逻辑为王·严谨但不死板"
+    },
+    {
+      "id": "opp_3",
+      "title": "【清华AIR暑期科研实习】招募NLP方向研究助理",
+      "kind": "科研招募",
+      "category": "research",
+      "sub_category": "AI/机器学习",
+      "role_type": "学徒求带",
+      "collab_mode": "稳健型",
+      "ai_summary": "赵敏教授实验室开放暑期研究实习名额，欢迎对NLP有基础的同学。",
+      "skills": [
+        "NLP",
+        "PyTorch",
+        "论文阅读",
+        "Python"
+      ],
+      "tags": [
+        "NLP",
+        "大语言模型",
+        "科研实习"
+      ],
+      "deadline": "2026-09-01",
+      "capacity": 2,
+      "applications_count": 1,
+      "owner": "赵敏教授",
+      "initiator_profile": {
+        "collab_tags": [
+          "学术导师",
+          "耐心指导者"
+        ],
+        "bio": "教授，已发表多篇顶会"
+      },
+      "match_score": 25,
+      "match_reason": "匹配1/4项技能：Python",
+      "my_application": {
+        "status": "accepted"
+      },
+      "detail_description": "清华大学智能产业研究院赵敏教授组暑期研究实习项目。提供计算资源和周组会指导。",
+      "team_members": [
+        {
+          "name": "赵敏教授",
+          "role": "导师",
+          "skills": [
+            "NLP",
+            "学术指导"
+          ],
+          "style": "学术导师",
+          "avatar": "赵"
+        },
+        {
+          "name": "张三",
+          "role": "研究助理（已加入）",
+          "skills": [
+            "Python",
+            "PyTorch"
+          ],
+          "style": "主动学习者",
+          "avatar": "张"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "Python",
+          "PyTorch",
+          "英文论文阅读"
+        ],
+        "preferred_experience": "修过NLP或深度学习课程",
+        "weekly_commitment": "每周15+小时",
+        "team_fit": "师徒制的研究环境。"
+      },
+      "team_culture": "📖 学术导向·师徒传承"
+    },
+    {
+      "id": "opp_4",
+      "title": "【校园二手交易平台】全栈开发2=2",
+      "kind": "项目招募",
+      "category": "project",
+      "sub_category": "创业孵化",
+      "role_type": "灵感合伙人",
+      "collab_mode": "灵感碰撞型",
+      "ai_summary": "发起者只有产品和市场方向的想法，急缺技术合伙人和设计合伙人。",
+      "skills": [
+        "React",
+        "Node.js",
+        "UI/UX",
+        "创业"
+      ],
+      "tags": [
+        "创业",
+        "全栈开发"
+      ],
+      "deadline": "2026-09-15",
+      "capacity": 2,
+      "applications_count": 0,
+      "owner": "李华",
+      "initiator_profile": {
+        "collab_tags": [
+          "愿景驱动者",
+          "深度思考者"
+        ],
+        "bio": "商科大二"
+      },
+      "match_score": 0,
+      "match_reason": "可以补充新技能",
+      "my_application": null,
+      "detail_description": "CourseSwap面向西浦学生的C2C闲置交易平台，已完成200份问卷调研。",
+      "team_members": [
+        {
+          "name": "李华",
+          "role": "产品/CEO",
+          "skills": [
+            "产品设计",
+            "用户研究"
+          ],
+          "style": "愿景驱动者",
+          "avatar": "李"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "React/Vue前端",
+          "Node.js/Python后端"
+        ],
+        "preferred_experience": "有全栈项目经验优先",
+        "weekly_commitment": "灵活，每周1-2次线下",
+        "team_fit": "需要ownership。"
+      },
+      "team_culture": "💡 创意驱动·扁平协作"
+    },
+    {
+      "id": "opp_5",
+      "title": "【校园足球联赛】校队补强招募前锋和门将",
+      "kind": "活动招募",
+      "category": "sports",
+      "sub_category": "足球",
+      "role_type": "散人组局",
+      "collab_mode": "稳健型",
+      "ai_summary": "西浦足球队为秋季联赛补强阵容，急缺前锋和门将各1名。",
+      "skills": [
+        "足球",
+        "竞技体育"
+      ],
+      "tags": [
+        "足球",
+        "校队",
+        "联赛"
+      ],
+      "deadline": "2026-08-30",
+      "capacity": 2,
+      "applications_count": 1,
+      "owner": "体育部",
+      "initiator_profile": {
+        "collab_tags": [
+          "经验老将",
+          "团队领袖"
+        ],
+        "bio": "校队队长"
+      },
+      "match_score": 0,
+      "match_reason": "可以补充新技能",
+      "my_application": null,
+      "detail_description": "西浦男子足球队参加2026年苏州市大学生足球联赛。每周二、四下午训练。",
+      "team_members": [
+        {
+          "name": "刘队",
+          "role": "队长/中场",
+          "skills": [
+            "中场组织"
+          ],
+          "style": "团队领袖",
+          "avatar": "刘"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "前锋：速度+射门意识",
+          "门将：反应快"
+        ],
+        "preferred_experience": "有校队经验优先",
+        "weekly_commitment": "每周2次训练+周末比赛",
+        "team_fit": "比赛日不能鸽。"
+      },
+      "team_culture": "⚽ 团结拼搏·胜负共担"
+    },
+    {
+      "id": "opp_6",
+      "title": "【大疆RoboMaster机甲大师赛】嵌入式+机械招募",
+      "kind": "比赛招募",
+      "category": "competition",
+      "sub_category": "机器人竞赛",
+      "role_type": "核心成员",
+      "collab_mode": "冲刺型",
+      "ai_summary": "西浦RoboMaster战队已获校方资金支持，急缺嵌入式开发和机械设计各1名。",
+      "skills": [
+        "嵌入式",
+        "STM32",
+        "SolidWorks",
+        "机械设计"
+      ],
+      "tags": [
+        "RoboMaster",
+        "机甲大师"
+      ],
+      "deadline": "2026-09-10",
+      "capacity": 2,
+      "applications_count": 0,
+      "owner": "陈工",
+      "initiator_profile": {
+        "collab_tags": [
+          "技术极客",
+          "永不言弃"
+        ],
+        "bio": "机器人工程大三"
+      },
+      "match_score": 0,
+      "match_reason": "可以补充新技能",
+      "my_application": null,
+      "detail_description": "西浦RoboMaster战队第二年参赛，目标分区赛八强→全国赛入围。",
+      "team_members": [
+        {
+          "name": "陈工",
+          "role": "队长/视觉算法",
+          "skills": [
+            "OpenCV"
+          ],
+          "style": "技术极客",
+          "avatar": "陈"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "嵌入式STM32",
+          "机械设计SolidWorks"
+        ],
+        "preferred_experience": "有机器人比赛经历优先",
+        "weekly_commitment": "每周3次线下集训",
+        "team_fit": "典型的工程师团队。"
+      },
+      "team_culture": "🤖 硬核极客·实物为王"
+    },
+    {
+      "id": "opp_7",
+      "title": "【计算机视觉论文复现小组】CV方向科研入门",
+      "kind": "科研招募",
+      "category": "research",
+      "sub_category": "AI/机器学习",
+      "role_type": "学徒求带",
+      "collab_mode": "稳健型",
+      "ai_summary": "张明教授指导的论文复现小组，面向CV初学者。每周一次讨论会。",
+      "skills": [
+        "PyTorch",
+        "计算机视觉",
+        "论文阅读"
+      ],
+      "tags": [
+        "CV",
+        "论文复现",
+        "科研入门"
+      ],
+      "deadline": "2026-08-20",
+      "capacity": 5,
+      "applications_count": 2,
+      "owner": "张明教授",
+      "initiator_profile": {
+        "collab_tags": [
+          "学术导师",
+          "因材施教"
+        ],
+        "bio": "计算机系教授，CV方向"
+      },
+      "match_score": 33,
+      "match_reason": "匹配1/3项技能：PyTorch",
+      "my_application": null,
+      "detail_description": "张明教授发起的CV论文复现学习小组。12周计划覆盖经典网络。",
+      "team_members": [
+        {
+          "name": "张明教授",
+          "role": "导师",
+          "skills": [
+            "计算机视觉"
+          ],
+          "style": "学术导师",
+          "avatar": "张"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "Python基础",
+          "PyTorch入门"
+        ],
+        "preferred_experience": "无科研经验要求",
+        "weekly_commitment": "每周讨论会2小时+自主复现5-8小时",
+        "team_fit": "学在一起而非卷在一起。"
+      },
+      "team_culture": "📚 学在一起·不卷不急"
+    },
+    {
+      "id": "opp_8",
+      "title": "【Python开源项目】校园课程评价平台贡献者招募",
+      "kind": "项目招募",
+      "category": "project",
+      "sub_category": "开源贡献",
+      "role_type": "灵感合伙人",
+      "collab_mode": "灵感碰撞型",
+      "ai_summary": "已有的开源项目GitHub 200+stars，招募贡献者。",
+      "skills": [
+        "Vue3",
+        "FastAPI",
+        "PostgreSQL",
+        "开源"
+      ],
+      "tags": [
+        "开源",
+        "课程评价"
+      ],
+      "deadline": "2026-12-31",
+      "capacity": 5,
+      "applications_count": 0,
+      "owner": "开源社区",
+      "initiator_profile": {
+        "collab_tags": [
+          "开源布道者",
+          "技术导师"
+        ],
+        "bio": "项目创始人"
+      },
+      "match_score": 0,
+      "match_reason": "可以补充新技能",
+      "my_application": null,
+      "detail_description": "CourseWatch开源校园课程评价平台，提供mentor指导。",
+      "team_members": [
+        {
+          "name": "学长A",
+          "role": "项目创始人",
+          "skills": [
+            "FastAPI",
+            "Vue3"
+          ],
+          "style": "开源布道者",
+          "avatar": "A"
+        }
+      ],
+      "recruit_profile": {
+        "required_skills": [
+          "Python或JS基础",
+          "Git使用"
+        ],
+        "preferred_experience": "有个人项目即可",
+        "weekly_commitment": "完全灵活",
+        "team_fit": "异步协作的开源项目。"
+      },
+      "team_culture": "开源精神·mentor带飞"
+    }
+  ]
+}

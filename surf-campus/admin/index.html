@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f4f5">
+  <title>SURF Campus 管理端</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a class="brand" href="/admin/"><span>S</span><strong>SURF 管理端</strong></a>
+      <nav id="admin-nav" aria-label="管理端导航">
+        <button class="is-active" data-view="overview"><i data-lucide="layout-dashboard"></i>概览</button>
+        <button data-view="moderation"><i data-lucide="shield-check"></i>帖子与媒体</button>
+        <button data-view="taxonomy"><i data-lucide="tags"></i>分区与 Tag</button>
+        <button data-view="notifications"><i data-lucide="bell"></i>通知</button>
+        <button data-view="learning"><i data-lucide="book-open"></i>资料与问答</button>
+        <button data-view="events"><i data-lucide="calendar-days"></i>活动</button>
+        <button data-view="opportunities"><i data-lucide="users-round"></i>组队招募</button>
+        <button data-view="reports"><i data-lucide="flag"></i>举报</button>
+        <button data-view="audit"><i data-lucide="scroll-text"></i>审计记录</button>
+        <button data-view="system"><i data-lucide="activity"></i>系统状态</button>
+      </nav>
+      <a class="student-link" href="/"><i data-lucide="arrow-up-right"></i>打开学生端</a>
+    </aside>
+
+    <main>
+      <header class="admin-topbar">
+        <div><span>本地 P0 环境</span><strong id="view-title">管理概览</strong></div>
+        <label class="role-control">Mock 角色
+          <select id="role-select">
+            <option value="platform_admin">平台管理员</option>
+            <option value="moderator">内容审核员</option>
+            <option value="teacher">教师 / 助教</option>
+            <option value="organizer">活动组织者</option>
+            <option value="student">学生（权限拒绝测试）</option>
+          </select>
+        </label>
+      </header>
+      <div class="admin-content" id="admin-content" aria-live="polite"></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+  <script src="admin.js" defer></script>
+</body>
+</html>

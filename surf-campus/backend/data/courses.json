@@ -1,0 +1,441 @@
+{
+ "resources": [
+  {
+   "id": "r1",
+   "name": "CSE101 2024期末试卷（含答案）",
+   "course": "CSE101",
+   "courseName": "程序设计基础",
+   "type": "试卷",
+   "uploader": "助教Amy",
+   "year": "Year 1",
+   "term": "Semester 2",
+   "major": "ICS",
+   "source": "官方",
+   "size": "2.3MB",
+   "downloads": 156
+  },
+  {
+   "id": "r2",
+   "name": "微积分全英文讲义",
+   "course": "MTH008",
+   "courseName": "微积分",
+   "type": "讲义",
+   "uploader": "Prof. Chen",
+   "year": "Year 1",
+   "term": "Semester 1",
+   "major": "Math",
+   "source": "官方",
+   "size": "8.1MB",
+   "downloads": 89
+  },
+  {
+   "id": "r3",
+   "name": "机器学习课件合集（全14周）",
+   "course": "INT305",
+   "courseName": "机器学习导论",
+   "type": "课件",
+   "uploader": "Prof. Zhang",
+   "year": "Year 3",
+   "term": "Semester 1",
+   "major": "ICS",
+   "source": "官方",
+   "size": "15MB",
+   "downloads": 203
+  },
+  {
+   "id": "r4",
+   "name": "学术英语写作手册",
+   "course": "EAP023",
+   "courseName": "学术英语",
+   "type": "资料",
+   "uploader": "EAP中心",
+   "year": "Year 2",
+   "term": "Semester 1",
+   "major": "All",
+   "source": "官方",
+   "size": "4.5MB",
+   "downloads": 312
+  },
+  {
+   "id": "r5",
+   "name": "CSE101 数据结构笔记（个人整理）",
+   "course": "CSE101",
+   "courseName": "程序设计基础",
+   "type": "笔记",
+   "uploader": "张三",
+   "year": "Year 1",
+   "term": "Semester 2",
+   "major": "ICS",
+   "source": "个人",
+   "size": "1.2MB",
+   "downloads": 67
+  },
+  {
+   "id": "r6",
+   "name": "MTH008 历年真题汇总",
+   "course": "MTH008",
+   "courseName": "微积分",
+   "type": "试卷",
+   "uploader": "学长分享",
+   "year": "Year 1",
+   "term": "Semester 1",
+   "major": "Math",
+   "source": "个人",
+   "size": "5.6MB",
+   "downloads": 45
+  },
+  {
+   "id": "r7",
+   "name": "CST201 数据结构与算法课程笔记",
+   "course": "CST201",
+   "courseName": "数据结构与算法",
+   "type": "笔记",
+   "uploader": "学长分享",
+   "year": "Year 2",
+   "term": "Semester 1",
+   "major": "CST",
+   "source": "个人",
+   "size": "3.2MB",
+   "downloads": 98
+  },
+  {
+   "id": "r8",
+   "name": "INT305 机器学习期末复习提纲",
+   "course": "INT305",
+   "courseName": "机器学习导论",
+   "type": "复习提纲",
+   "uploader": "助教Kevin",
+   "year": "Year 3",
+   "term": "Semester 1",
+   "major": "ICS",
+   "source": "官方",
+   "size": "1.8MB",
+   "downloads": 175
+  },
+  {
+   "id": "r9",
+   "name": "EAP023 学术英语写作模板合集",
+   "course": "EAP023",
+   "courseName": "学术英语",
+   "type": "资料",
+   "uploader": "EAP中心",
+   "year": "Year 2",
+   "term": "Semester 1",
+   "major": "All",
+   "source": "官方",
+   "size": "2.1MB",
+   "downloads": 260
+  },
+  {
+   "id": "r10",
+   "name": "DMT101 数字媒体基础实验指导",
+   "course": "DMT101",
+   "courseName": "数字媒体基础",
+   "type": "实验指导",
+   "uploader": "Prof. Liu",
+   "year": "Year 1",
+   "term": "Semester 2",
+   "major": "DMT",
+   "source": "官方",
+   "size": "4.0MB",
+   "downloads": 66
+  },
+  {
+   "id": "r11",
+   "name": "MTH008 微积分历年试卷精讲（2019-2024）",
+   "course": "MTH008",
+   "courseName": "微积分",
+   "type": "试卷",
+   "uploader": "学姐整理",
+   "year": "Year 1",
+   "term": "Semester 1",
+   "major": "MTH",
+   "source": "个人",
+   "size": "6.4MB",
+   "downloads": 312
+  },
+  {
+   "id": "r12",
+   "name": "CSE101 Python编程课后作业答案全集",
+   "course": "CSE101",
+   "courseName": "程序设计基础",
+   "type": "作业",
+   "uploader": "助教Amy",
+   "year": "Year 1",
+   "term": "Semester 2",
+   "major": "ICS",
+   "source": "官方",
+   "size": "2.7MB",
+   "downloads": 145
+  },
+  {
+   "id": "r13",
+   "name": "INT305 深度学习专题课件（进阶）",
+   "course": "INT305",
+   "courseName": "机器学习导论",
+   "type": "课件",
+   "uploader": "Prof. Zhang",
+   "year": "Year 3",
+   "term": "Semester 1",
+   "major": "ICS",
+   "source": "官方",
+   "size": "12.5MB",
+   "downloads": 88
+  },
+  {
+   "id": "r14",
+   "name": "CST201 算法竞赛刷题笔记（LeetCode精选）",
+   "course": "CST201",
+   "courseName": "数据结构与算法",
+   "type": "笔记",
+   "uploader": "ACM队员",
+   "year": "Year 2",
+   "term": "Semester 2",
+   "major": "CST",
+   "source": "个人",
+   "size": "5.1MB",
+   "downloads": 121
+  },
+  {
+   "id": "r15",
+   "name": "EAP023 学术演讲技巧与范例视频索引",
+   "course": "EAP023",
+   "courseName": "学术英语",
+   "type": "资料",
+   "uploader": "同学分享",
+   "year": "Year 2",
+   "term": "Semester 1",
+   "major": "All",
+   "source": "个人",
+   "size": "1.5MB",
+   "downloads": 57
+  }
+ ],
+ "qa": [
+  {
+   "id": "q1",
+   "question": "CSE101期末难度跟期中比怎么样？",
+   "summary": "求问历届学长学姐——期中考了85但感觉期末难度完全不一样，尤其是最后的算法设计题...",
+   "course": "CSE101",
+   "courseName": "程序设计基础",
+   "author": "张三",
+   "major_class": "计算机2101",
+   "status": "solved",
+   "pinned": false,
+   "answers_count": 2,
+   "views": 156,
+   "votes": 32,
+   "time": "2026-08-09T15:30",
+   "tag": "最新",
+   "answers_detail": [
+    {
+     "id": "a1",
+     "role": "助教",
+     "content": "期中侧重基础语法，期末更注重算法和数据结构。重点复习数组、链表和排序算法。",
+     "accepted": true,
+     "votes": 8
+    },
+    {
+     "id": "a2",
+     "role": "学长",
+     "content": "去年最后一道大题是二叉树遍历，建议提前看看递归写法。",
+     "accepted": false,
+     "votes": 3
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "question": "微积分的辅助教材推荐？",
+   "summary": "MTH008下周测验，教材上的例题太简单了，求推荐一些难度适中的练习册...",
+   "course": "MTH008",
+   "courseName": "微积分",
+   "author": "李华",
+   "major_class": "应数2203",
+   "status": "solved",
+   "pinned": false,
+   "answers_count": 1,
+   "views": 89,
+   "votes": 23,
+   "time": "2026-08-09T10:00",
+   "tag": "热门",
+   "answers_detail": [
+    {
+     "id": "a3",
+     "role": "教师",
+     "content": "推荐Stewart的Calculus和Apostol的Calculus Vol.1作为辅助阅读。",
+     "accepted": false,
+     "votes": 6
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "question": "INT305 Machine Learning项目选题求建议",
+   "summary": "这学期ML课的final project选题纠结中，目前考虑图像分类和NLP两个方向...",
+   "course": "INT305",
+   "courseName": "机器学习导论",
+   "author": "陈工",
+   "major_class": "机器人2104",
+   "status": "solved",
+   "pinned": false,
+   "answers_count": 3,
+   "views": 234,
+   "votes": 47,
+   "time": "2026-08-08T18:20",
+   "tag": "热门",
+   "answers_detail": [
+    {
+     "id": "a4",
+     "role": "同学",
+     "content": "推荐做图像分类，用MNIST或CIFAR-10，资料丰富容易上手。",
+     "accepted": false,
+     "votes": 4
+    },
+    {
+     "id": "a5",
+     "role": "助教",
+     "content": "建议选NLP方向——情感分析，数据集好找，模型相对轻量。",
+     "accepted": true,
+     "votes": 9
+    }
+   ]
+  },
+  {
+   "id": "q4",
+   "question": "数据结构（CST201）链表操作有哪些常见坑？",
+   "summary": "写链表反转时总是指针跑飞，有没有什么debug技巧或者常见的边界条件需要注意？",
+   "course": "CST201",
+   "courseName": "数据结构与算法",
+   "author": "王小明",
+   "major_class": "数据科学2202",
+   "status": "unsolved",
+   "pinned": true,
+   "answers_count": 1,
+   "views": 67,
+   "votes": 15,
+   "time": "2026-08-10T09:00",
+   "tag": "待解决",
+   "answers_detail": [
+    {
+     "id": "a6",
+     "role": "学长",
+     "content": "最易出错的是空指针判断和循环链表边界条件。建议画图辅助。",
+     "accepted": false,
+     "votes": 2
+    }
+   ]
+  },
+  {
+   "id": "q5",
+   "question": "学术英语（EAP023）论文写作——怎么避免中式英语？",
+   "summary": "每次写essay都被导师圈一堆chinglish，明明语法没错但读起来就是不像英语...",
+   "course": "EAP023",
+   "courseName": "学术英语",
+   "author": "张三",
+   "major_class": "计算机2101",
+   "status": "unsolved",
+   "pinned": false,
+   "answers_count": 2,
+   "views": 112,
+   "votes": 28,
+   "time": "2026-08-08T14:00",
+   "tag": "精华",
+   "answers_detail": [
+    {
+     "id": "a7",
+     "role": "教师",
+     "content": "使用Grammarly辅助检查，多读英文论文培养语感。",
+     "accepted": false,
+     "votes": 5
+    },
+    {
+     "id": "a8",
+     "role": "同学",
+     "content": "推荐The Elements of Style这本书，短小精悍。",
+     "accepted": false,
+     "votes": 3
+    }
+   ]
+  },
+  {
+   "id": "q6",
+   "question": "有推荐的Python编程练习平台吗？",
+   "summary": "LeetCode刷了50题但感觉和课程作业风格不太一样，有没有更贴近CSE101教学进度的练习...",
+   "course": "CSE101",
+   "courseName": "程序设计基础",
+   "author": "李华",
+   "major_class": "应数2203",
+   "status": "unsolved",
+   "pinned": false,
+   "answers_count": 0,
+   "views": 45,
+   "votes": 8,
+   "time": "2026-08-10T20:00",
+   "tag": "待解决",
+   "answers_detail": []
+  }
+ ],
+ "courses": [
+  {
+   "id": "c1",
+   "code": "CSE101",
+   "name": "程序设计基础",
+   "year": "Year 1",
+   "term": "Semester 2",
+   "major": "ICS",
+   "credits": 4,
+   "instructor": "Prof. Li"
+  },
+  {
+   "id": "c2",
+   "code": "MTH008",
+   "name": "微积分",
+   "year": "Year 1",
+   "term": "Semester 1",
+   "major": "MTH",
+   "credits": 5,
+   "instructor": "Prof. Chen"
+  },
+  {
+   "id": "c3",
+   "code": "INT305",
+   "name": "机器学习导论",
+   "year": "Year 3",
+   "term": "Semester 1",
+   "major": "ICS",
+   "credits": 4,
+   "instructor": "Prof. Zhang"
+  },
+  {
+   "id": "c4",
+   "code": "EAP023",
+   "name": "学术英语",
+   "year": "Year 2",
+   "term": "Semester 1",
+   "major": "All",
+   "credits": 3,
+   "instructor": "EAP中心"
+  },
+  {
+   "id": "c5",
+   "code": "CST201",
+   "name": "数据结构与算法",
+   "year": "Year 2",
+   "term": "Semester 1",
+   "major": "CST",
+   "credits": 4,
+   "instructor": "Prof. Wang"
+  },
+  {
+   "id": "c6",
+   "code": "DMT101",
+   "name": "数字媒体基础",
+   "year": "Year 1",
+   "term": "Semester 2",
+   "major": "DMT",
+   "credits": 3,
+   "instructor": "Prof. Liu"
+  }
+ ]
+}

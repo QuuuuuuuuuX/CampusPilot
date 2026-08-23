@@ -1,0 +1,269 @@
+{
+  "conversations": [
+    {
+      "id": "m1",
+      "contact": "张启明",
+      "avatar": "张",
+      "role": "副教授",
+      "tag": "recruit",
+      "tagLabel": "RA申请",
+      "lastMsg": "好的，简历已收到。下周三下午3点来面聊。",
+      "time": "2026-08-10T15:00",
+      "msgs": [
+        {
+          "from": "self",
+          "text": "张老师您好！我是计算机2101班张三，对您图算法RA岗位很感兴趣。",
+          "time": "2026-08-09T10:00"
+        },
+        {
+          "from": "contact",
+          "text": "你好张三！可以先发一份简历给我看看吗？",
+          "time": "2026-08-09T14:00"
+        },
+        {
+          "from": "self",
+          "text": "好的老师，这是我的简历。",
+          "time": "2026-08-09T14:30"
+        },
+        {
+          "from": "contact",
+          "text": "好的，简历已收到。下周三下午3点来面聊。",
+          "time": "2026-08-10T15:00"
+        }
+      ],
+      "status": "面谈中"
+    },
+    {
+      "id": "m2",
+      "contact": "赵敏教授",
+      "avatar": "赵",
+      "role": "教授",
+      "lastMsg": "目前还有2个RA名额，欢迎下周来实验室参观。",
+      "time": "2026-08-08T16:00",
+      "msgs": [
+        {
+          "from": "self",
+          "text": "赵教授您好，想咨询一下NLP项目RA的具体要求。",
+          "time": "2026-08-08T10:00"
+        },
+        {
+          "from": "contact",
+          "text": "你好！你有哪些NLP基础呢？",
+          "time": "2026-08-08T14:00"
+        },
+        {
+          "from": "self",
+          "text": "修过INT305，用PyTorch做过文本分类项目。",
+          "time": "2026-08-08T15:00"
+        },
+        {
+          "from": "contact",
+          "text": "很好的基础！目前还有2个RA名额，欢迎下周来实验室参观。",
+          "time": "2026-08-08T16:00"
+        }
+      ],
+      "status": "沟通中"
+    },
+    {
+      "id": "m3",
+      "contact": "Amy Wang",
+      "avatar": "A",
+      "role": "助教",
+      "lastMsg": "Python的list comprehension常考，给你发了几个练习题。",
+      "time": "2026-08-07T20:00",
+      "msgs": [
+        {
+          "from": "self",
+          "text": "Amy学姐，CSE101期中备考有什么建议？",
+          "time": "2026-08-07T18:00"
+        },
+        {
+          "from": "contact",
+          "text": "建议重点复习前三章。给你发了几个练习题。",
+          "time": "2026-08-07T20:00"
+        }
+      ],
+      "status": ""
+    },
+    {
+      "id": "m4",
+      "contact": "Dr. Sarah Chen",
+      "avatar": "S",
+      "role": "讲师",
+      "tag": "office_hour",
+      "tagLabel": "📅 预约确认",
+      "lastMsg": "已确认：本周五09:00-10:00 Office Hour。",
+      "time": "2026-08-06T09:00",
+      "msgs": [
+        {
+          "from": "system",
+          "text": "📅 预约确认：周五09:00-10:00，CB 567。请准时参加。",
+          "time": "2026-08-06T09:00"
+        }
+      ],
+      "status": "已确认"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "level": "urgent",
+      "type": "booking",
+      "content": "【预约确认】您已成功预约 Dr. Sarah Chen 的 Office Hour：08-14 周五 09:00-10:00，CB 567。",
+      "time": "2026-08-13 09:30",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n6",
+      "level": "urgent",
+      "type": "system",
+      "content": "【教务通知】2026秋季学期选课系统将于8月12日9:00开放，请提前规划课程。",
+      "time": "2026-08-11 16:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n7",
+      "level": "urgent",
+      "type": "result",
+      "content": "【RA申请结果】张启明副教授已接受你图算法RA岗位的申请，请查看站内信确认。",
+      "time": "2026-08-10 14:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n8",
+      "level": "urgent",
+      "type": "qa_reply",
+      "content": "【老师回复】张启明副教授回答了你的问题「CST201链表操作有哪些常见坑？」并标记为最佳答案。",
+      "time": "2026-08-09 16:30",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n9",
+      "level": "urgent",
+      "type": "event",
+      "content": "【报名成功】您已成功报名「科技创客体验日」（8月18日 10:00-16:00），请凭电子票入场。",
+      "time": "2026-08-08 10:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n2",
+      "level": "normal",
+      "type": "comment",
+      "content": "【新评论】Amy Wang 评论了你的话题「CSE101期末复习资料」：建议重点复习数组操作和链表。",
+      "time": "2026-08-09 10:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n10",
+      "level": "normal",
+      "type": "like",
+      "content": "【点赞】赵敏教授赞了你的话题「RoboMaster战队补强招募」。",
+      "time": "2026-08-08 20:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n11",
+      "level": "normal",
+      "type": "reminder",
+      "content": "【活动提醒】「摄影协会·校园外拍活动」将于30分钟后（15:00）在白鹭园集合，别迟到哦！",
+      "time": "2026-08-07 14:35",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n12",
+      "level": "normal",
+      "type": "update",
+      "content": "【资料更新】你收藏的「CSE101 数据结构笔记（个人整理）」有新版更新，点击查看差异。",
+      "time": "2026-08-07 09:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n3",
+      "level": "normal",
+      "type": "deadline",
+      "content": "【报名提醒】外研社·国才杯演讲比赛校赛报名8月20日截止，已提交报名表的同学请留意。",
+      "time": "2026-08-06 14:00",
+      "read": true,
+      "processed": false,
+      "saved_for_later": true
+    },
+    {
+      "id": "n13",
+      "level": "optional",
+      "type": "recommend",
+      "content": "【热门推荐】「交换到南洋理工的体验 — AMA」获得24个赞，成为本周最热话题。",
+      "time": "2026-08-08 18:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n14",
+      "level": "optional",
+      "type": "new_resource",
+      "content": "【新资料】INT305 机器学习导论新增「Week 6: SVM与核方法」课件，来自 Prof. Zhang。",
+      "time": "2026-08-07 11:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n15",
+      "level": "optional",
+      "type": "preview",
+      "content": "【活动预告】「TEDxXJTLU「融合+」系列沙龙」将于8月20日举办，敬请期待更多详情。",
+      "time": "2026-08-06 16:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n16",
+      "level": "optional",
+      "type": "maintenance",
+      "content": "【系统维护】通知中心将于8月15日凌晨2:00-4:00进行系统升级，期间可能短暂不可用。",
+      "time": "2026-08-06 10:00",
+      "read": false,
+      "processed": false,
+      "saved_for_later": false
+    },
+    {
+      "id": "n4",
+      "level": "normal",
+      "type": "system",
+      "content": "【图书馆】B2层Wi-Fi问题已确认，IT部门正在更换AP设备，预计8月13日前完成。",
+      "time": "2026-08-05 11:30",
+      "read": true,
+      "processed": true,
+      "saved_for_later": false
+    },
+    {
+      "id": "n5",
+      "level": "normal",
+      "type": "event",
+      "content": "【就业指导中心】8月4日职业规划工作坊参会提醒：请提前10分钟到场签到。",
+      "time": "2026-08-03 09:00",
+      "read": true,
+      "processed": true,
+      "saved_for_later": false
+    }
+  ]
+}
