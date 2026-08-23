@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>XJTLU 虚拟校园互动平台</title>
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ===== 网页版顶栏（桌面端显示） ===== -->
+  <header id="desktop-topbar">
+    <div class="dt-logo">
+      <span class="dt-logo-badge">XJTLU</span>
+      <span class="dt-logo-text">Virtual Campus</span>
+    </div>
+    <div class="dt-search" onclick="openSearch()">
+      <span class="search-icon">🔍</span>
+      <span>搜索动态、课程、活动...</span>
+    </div>
+    <div class="dt-user" id="dt-user"></div>
+  </header>
+
+  <div id="app-body">
+
+    <!-- ===== 网页版侧边栏（桌面端显示） ===== -->
+    <aside id="desktop-sidebar">
+      <div class="nav-item active" data-page="feed" onclick="switchTab('feed')">
+        <span class="nav-ico">🏠</span><span class="nav-txt">首页</span>
+      </div>
+      <div class="nav-item" data-page="academic" onclick="switchTab('academic')">
+        <span class="nav-ico">📚</span><span class="nav-txt">学术中心</span>
+      </div>
+      <div class="nav-item" data-page="events" onclick="switchTab('events')">
+        <span class="nav-ico">📅</span><span class="nav-txt">活动</span>
+      </div>
+      <div class="nav-item" data-page="treehole" onclick="switchTab('treehole')">
+        <span class="nav-ico">🌳</span><span class="nav-txt">匿名树洞</span>
+      </div>
+      <div class="nav-item" data-page="profile" onclick="switchTab('profile')">
+        <span class="nav-ico">👤</span><span class="nav-txt">我的</span>
+      </div>
+      <div class="sidebar-foot">v0.6.0 · XJTLU Virtual Campus</div>
+    </aside>
+
+    <!-- ===== 手机版顶栏（移动端显示） ===== -->
+    <div class="app-header" id="app-header">
+      <span class="app-header-back" id="header-back" style="display:none;" onclick="goBack()">←</span>
+      <span class="app-header-title" id="header-title">动态广场</span>
+      <span class="app-header-action" id="header-action"></span>
+    </div>
+
+    <!-- ===== 页面容器 ===== -->
+    <main id="page-container">
+
+      <!-- Feed Page -->
+      <div id="page-feed" class="page-content" style="display:block;">
+        <div class="feed-header-banner">
+          <div class="feed-banner-title">XJTLU 虚拟校园</div>
+          <div class="feed-banner-sub">连接每一位西浦人</div>
+        </div>
+        <div class="search-bar" onclick="openSearch()">
+          <span class="search-icon">🔍</span>
+          <span class="search-placeholder">搜索动态、课程、活动...</span>
+        </div>
+        <div class="post-list" id="post-list"></div>
+        <div class="floating-btn" onclick="navigateTo('post-create')">✏️</div>
+      </div>
+
+      <!-- Academic Page -->
+      <div id="page-academic" class="page-content" style="display:none;">
+        <div class="academic-tabs">
+          <div class="academic-tab active" onclick="switchAcademicTab('materials', this)">课程资料</div>
+          <div class="academic-tab" onclick="switchAcademicTab('questions', this)">课程问答</div>
+          <div class="academic-tab" onclick="switchAcademicTab('professors', this)">教授信息</div>
+        </div>
+        <div id="academic-materials" class="academic-panel">
+          <div class="quota-banner" id="material-quota-banner" onclick="openRulesModal()">📥 今日下载额度加载中...</div>
+          <input class="search-bar material-search" id="material-search" type="text" placeholder="🔍 搜索课程资料..." oninput="filterMaterials()">
+          <div class="material-list" id="material-list"></div>
+          <button class="share-resource-btn" onclick="openShareModal()">📤 分享资料 · 解锁额度</button>
+        </div>
+        <div id="academic-questions" class="academic-panel" style="display:none;">
+          <div class="question-list" id="question-list"></div>
+          <div class="floating-btn" onclick="showToast('提问功能开发中')">❓</div>
+        </div>
+        <div id="academic-professors" class="academic-panel" style="display:none;">
+          <div class="professor-list" id="professor-list"></div>
+        </div>
+      </div>
+
+      <!-- Events Page -->
+      <div id="page-events" class="page-content" style="display:none;">
+        <div class="events-banner">
+          <div class="events-banner-title">活动日历</div>
+          <div class="events-banner-sub">发现校园精彩活动</div>
+        </div>
+        <div class="event-list" id="event-list"></div>
+      </div>
+
+      <!-- Treehole Page -->
+      <div id="page-treehole" class="page-content" style="display:none;">
+        <div class="treehole-header">
+          <div class="treehole-title">🌳 匿名树洞</div>
+          <div class="treehole-sub">在这里，你可以放心倾诉</div>
+        </div>
+        <div class="treehole-list" id="treehole-list"></div>
+        <div class="floating-btn treehole-fab" onclick="showToast('匿名发布功能开发中')">💌</div>
+      </div>
+
+      <!-- Profile Page -->
+      <div id="page-profile" class="page-content" style="display:none;">
+        <div class="profile-header">
+          <div class="profile-avatar" id="profile-avatar">🧑‍🎓</div>
+          <div class="profile-info">
+            <div class="profile-name" id="profile-name">未登录</div>
+            <div class="profile-email" id="profile-email">登录后开启校园之旅</div>
+            <div class="profile-meta" id="profile-meta">—</div>
+          </div>
+          <div class="profile-edit" id="profile-edit-btn" onclick="navigateTo('login')">登录 / 注册</div>
+        </div>
+        <div class="profile-stats">
+          <div class="profile-stat" onclick="showToast('我的动态')">
+            <div class="profile-stat-num">12</div>
+            <div class="profile-stat-label">动态</div>
+          </div>
+          <div class="profile-stat" onclick="showToast('我的活动')">
+            <div class="profile-stat-num">5</div>
+            <div class="profile-stat-label">活动</div>
+          </div>
+          <div class="profile-stat" onclick="showToast('我的资料')">
+            <div class="profile-stat-num">8</div>
+            <div class="profile-stat-label">资料</div>
+          </div>
+          <div class="profile-stat" onclick="showToast('获赞')">
+            <div class="profile-stat-num">156</div>
+            <div class="profile-stat-label">获赞</div>
+          </div>
+        </div>
+        <div class="profile-menu">
+          <div class="profile-menu-item" onclick="navigateTo('messages')">
+            <span class="menu-icon">💬</span>
+            <span class="menu-text">站内消息</span>
+            <span class="menu-badge">3</span>
+            <span class="menu-arrow">›</span>
+          </div>
+          <div class="profile-menu-item" onclick="navigateTo('notifications')">
+            <span class="menu-icon">🔔</span>
+            <span class="menu-text">通知中心</span>
+            <span class="menu-badge">5</span>
+            <span class="menu-arrow">›</span>
+          </div>
+          <div class="profile-menu-item" onclick="navigateTo('settings')">
+            <span class="menu-icon">⚙️</span>
+            <span class="menu-text">设置</span>
+            <span class="menu-arrow">›</span>
+          </div>
+          <div class="profile-menu-item" onclick="handleLogout()">
+            <span class="menu-icon">🚪</span>
+            <span class="menu-text">退出登录</span>
+            <span class="menu-arrow">›</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Sub Pages ===== -->
+
+      <!-- Login Page -->
+      <div id="page-login" class="page-content sub-page" style="display:none;">
+        <div class="login-logo">
+          <div class="login-logo-circle">XJTLU</div>
+          <div class="login-logo-text">Virtual Campus</div>
+          <div class="login-logo-sub">西浦虚拟校园互动平台</div>
+        </div>
+        <div class="login-form">
+          <div class="form-group">
+            <label class="form-label">邮箱 / 用户名</label>
+            <input type="text" id="login-identifier" class="form-input" placeholder="请输入校园邮箱或用户名">
+          </div>
+          <div class="form-group" id="login-password-group">
+            <label class="form-label">密码</label>
+            <input type="password" id="login-password" class="form-input" placeholder="请输入密码">
+          </div>
+          <div class="form-group" id="login-code-group" style="display:none;">
+            <label class="form-label">验证码</label>
+            <div class="code-row">
+              <input type="text" id="login-code" class="form-input code-input" placeholder="请输入验证码">
+              <button class="code-btn" id="login-code-btn" onclick="sendCode('login-identifier','login-code-btn')">发送验证码</button>
+            </div>
+          </div>
+          <button class="primary-btn" onclick="handleLogin()">登录</button>
+          <div class="login-switch" onclick="toggleLoginMode()">
+            <span id="login-mode-text">验证码登录</span>
+          </div>
+          <div class="login-footer">
+            <span>还没有账号？</span>
+            <span class="link-text" onclick="navigateTo('register')">去注册</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Register Page -->
+      <div id="page-register" class="page-content sub-page" style="display:none;">
+        <div class="login-logo">
+          <div class="login-logo-circle">XJTLU</div>
+          <div class="login-logo-text">创建账号</div>
+          <div class="login-logo-sub">使用校园邮箱注册</div>
+        </div>
+        <div class="login-form">
+          <div class="form-group">
+            <label class="form-label">昵称</label>
+            <input type="text" id="reg-name" class="form-input" placeholder="请输入昵称">
+          </div>
+          <div class="form-group">
+            <label class="form-label">校园邮箱</label>
+            <input type="text" id="reg-email" class="form-input" placeholder="name@xjtlu.edu.cn">
+          </div>
+          <div class="form-group">
+            <label class="form-label">邮箱验证码</label>
+            <div class="code-row">
+              <input type="text" id="reg-code" class="form-input code-input" placeholder="请输入邮箱验证码">
+              <button class="code-btn" id="reg-code-btn" onclick="sendCode('reg-email','reg-code-btn')">发送验证码</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">密码</label>
+            <input type="password" id="reg-password" class="form-input" placeholder="设置密码（至少6位）">
+          </div>
+          <button class="primary-btn" onclick="handleRegister()">注册</button>
+          <div class="login-footer">
+            <span>已有账号？</span>
+            <span class="link-text" onclick="navigateTo('login')">去登录</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Detail Page -->
+      <div id="page-post-detail" class="page-content sub-page" style="display:none;">
+        <div id="post-detail-content"></div>
+      </div>
+
+      <!-- Treehole Detail Page -->
+      <div id="page-treehole-detail" class="page-content sub-page" style="display:none;">
+        <div id="treehole-detail-content"></div>
+      </div>
+
+      <!-- Event Detail Page -->
+      <div id="page-event-detail" class="page-content sub-page" style="display:none;">
+        <div id="event-detail-content"></div>
+      </div>
+
+      <!-- Messages Page -->
+      <div id="page-messages" class="page-content sub-page" style="display:none;">
+        <div class="message-list" id="message-list"></div>
+      </div>
+
+      <!-- Notifications Page -->
+      <div id="page-notifications" class="page-content sub-page" style="display:none;">
+        <div class="notification-list" id="notification-list"></div>
+      </div>
+
+      <!-- Settings Page -->
+      <div id="page-settings" class="page-content sub-page" style="display:none;">
+        <div class="settings-group">
+          <div class="settings-group-title">通用</div>
+          <div class="settings-item">
+            <span>语言 / Language</span>
+            <div class="settings-toggle">
+              <span class="toggle-option active" onclick="toggleLanguage(this, 'zh')">中文</span>
+              <span class="toggle-option" onclick="toggleLanguage(this, 'en')">EN</span>
+            </div>
+          </div>
+          <div class="settings-item" onclick="showToast('深色模式开发中')">
+            <span>深色模式</span>
+            <div class="settings-switch off"></div>
+          </div>
+        </div>
+        <div class="settings-group">
+          <div class="settings-group-title">隐私</div>
+          <div class="settings-item" onclick="showToast('隐私设置开发中')">
+            <span>谁能看到我的动态</span>
+            <span class="settings-value">所有人 ›</span>
+          </div>
+          <div class="settings-item" onclick="showToast('隐私设置开发中')">
+            <span>匿名发帖</span>
+            <div class="settings-switch on"></div>
+          </div>
+        </div>
+        <div class="settings-group">
+          <div class="settings-group-title">通知</div>
+          <div class="settings-item">
+            <span>点赞通知</span>
+            <div class="settings-switch on"></div>
+          </div>
+          <div class="settings-item">
+            <span>评论通知</span>
+            <div class="settings-switch on"></div>
+          </div>
+          <div class="settings-item">
+            <span>消息通知</span>
+            <div class="settings-switch on"></div>
+          </div>
+        </div>
+        <div class="settings-group">
+          <div class="settings-group-title">账号</div>
+          <div class="settings-item" onclick="navigateTo('change-password')">
+            <span>修改密码</span>
+            <span class="settings-value">›</span>
+          </div>
+        </div>
+        <div class="settings-group">
+          <div class="settings-group-title">关于</div>
+          <div class="settings-item" onclick="showToast('XJTLU Virtual Campus v0.6.0')">
+            <span>版本</span>
+            <span class="settings-value">v0.6.0 ›</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Change Password Page -->
+      <div id="page-change-password" class="page-content sub-page" style="display:none;">
+        <div class="login-form" style="margin-top:40px;">
+          <div class="form-group">
+            <label class="form-label">当前密码</label>
+            <input type="password" id="cp-old" class="form-input" placeholder="请输入当前密码">
+          </div>
+          <div class="form-group">
+            <label class="form-label">新密码</label>
+            <input type="password" id="cp-new" class="form-input" placeholder="至少 6 位">
+          </div>
+          <div class="form-group">
+            <label class="form-label">确认新密码</label>
+            <input type="password" id="cp-confirm" class="form-input" placeholder="再次输入新密码">
+          </div>
+          <button class="primary-btn" onclick="changePassword()">确认修改</button>
+        </div>
+      </div>
+
+      <!-- Edit Profile Page -->
+      <div id="page-edit-profile" class="page-content sub-page" style="display:none;">
+        <div class="login-form" style="margin-top:40px;">
+          <div class="form-group">
+            <label class="form-label">昵称</label>
+            <input type="text" id="ep-name" class="form-input" placeholder="请输入昵称">
+          </div>
+          <div class="form-group">
+            <label class="form-label">院系 / 学院</label>
+            <input type="text" id="ep-department" class="form-input" placeholder="如：计算机学院">
+          </div>
+          <button class="primary-btn" onclick="saveProfile()">保存修改</button>
+        </div>
+      </div>
+
+      <!-- Search Results Page -->
+      <div id="page-search" class="page-content sub-page" style="display:none;">
+        <div style="padding:16px 20px;">
+          <div class="search-bar" style="margin:0 0 16px;">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-input" class="search-input-real" placeholder="搜索动态、课程、活动..." style="border:none;outline:none;flex:1;font-size:14px;background:transparent;" onkeydown="if(event.key==='Enter')doSearch()">
+          </div>
+          <div id="search-results" style="font-size:14px;">输入关键词搜索校园内容</div>
+        </div>
+      </div>
+
+      <!-- Post Create Page -->
+      <div id="page-post-create" class="page-content sub-page" style="display:none;">
+        <div class="create-post">
+          <div class="create-post-user">
+            <div class="create-post-avatar">🧑‍🎓</div>
+            <div>
+              <div class="create-post-name" id="post-user-name">未登录</div>
+              <div class="create-post-visibility">🌐 所有人可见</div>
+            </div>
+            <label class="create-post-anon">
+              <input type="checkbox" id="anon-toggle"> 匿名发布
+            </label>
+          </div>
+          <input type="text" id="post-title-input" class="create-post-title-input" placeholder="标题（选填）">
+          <textarea id="post-content-input" class="create-post-textarea" placeholder="分享点什么..."></textarea>
+          <div class="create-post-tools">
+            <div class="create-post-tool" onclick="pickImage()">📷 图片</div>
+            <div class="create-post-tool" onclick="showToast('标签功能开发中')">🏷️ 标签</div>
+            <div class="create-post-tool" onclick="showToast('话题功能开发中')"># 话题</div>
+          </div>
+          <div class="post-image-preview" id="post-image-preview"></div>
+          <input type="file" id="image-input" accept="image/*" style="display:none;" onchange="doUpload(this)">
+          <button class="primary-btn" onclick="submitPost()">发布</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===== 手机版底部 Tab 栏（移动端显示） ===== -->
+  <nav class="tab-bar" id="tab-bar">
+    <div class="tab-item active" data-page="feed" onclick="switchTab('feed')">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-label">首页</span>
+    </div>
+    <div class="tab-item" data-page="academic" onclick="switchTab('academic')">
+      <span class="tab-icon">📚</span>
+      <span class="tab-label">学术</span>
+    </div>
+    <div class="tab-item" data-page="events" onclick="switchTab('events')">
+      <span class="tab-icon">📅</span>
+      <span class="tab-label">活动</span>
+    </div>
+    <div class="tab-item" data-page="treehole" onclick="switchTab('treehole')">
+      <span class="tab-icon">🌳</span>
+      <span class="tab-label">树洞</span>
+    </div>
+    <div class="tab-item" data-page="profile" onclick="switchTab('profile')">
+      <span class="tab-icon">👤</span>
+      <span class="tab-label">我的</span>
+    </div>
+  </nav>
+</div>
+
+<!-- ===== 课程资料弹窗 ===== -->
+<div id="rules-modal" class="modal-overlay" style="display:none;" onclick="if(event.target===this)closeModal('rules-modal')">
+  <div class="modal-box">
+    <div class="modal-title">📚 课程资料 · 以一换一</div>
+    <div class="modal-rules" id="rules-list"></div>
+    <div class="modal-unlock-tip" id="rules-unlock-tip" style="display:none;">分享资料即可解锁更多下载额度哦～</div>
+    <button class="primary-btn" onclick="closeModal('rules-modal')">知道了</button>
+  </div>
+</div>
+
+<div id="share-modal" class="modal-overlay" style="display:none;" onclick="if(event.target===this)closeModal('share-modal')">
+  <div class="modal-box">
+    <div class="modal-title">📤 分享资料 · 解锁额度</div>
+    <div class="form-group">
+      <label class="form-label">资料标题 *</label>
+      <input class="form-input" id="share-title" placeholder="如：操作系统期末复习提纲">
+    </div>
+    <div class="form-group">
+      <label class="form-label">课程</label>
+      <input class="form-input" id="share-course" placeholder="如：CSE101">
+    </div>
+    <div class="form-group">
+      <label class="form-label">类型</label>
+      <select class="form-input" id="share-type">
+        <option>课件</option><option>笔记</option><option>复习资料</option>
+        <option>习题解答</option><option>模板</option><option>其他</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">文件 *（PDF / Word / PPT / Excel / 压缩包，≤50MB）</label>
+      <input class="form-input share-file-input" id="share-file" type="file" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.md,.zip,.rar,.7z" onchange="pickShareFile(this)">
+      <div class="share-file-name" id="share-file-name"></div>
+    </div>
+    <div class="share-tip">🎁 分享 1 份资料 → 今日下载额度 +2 次</div>
+    <button class="primary-btn" onclick="submitShare()" style="margin-top:6px;">分享并解锁 +2</button>
+  </div>
+</div>
+
+<!-- ===== Toast ===== -->
+<div id="toast" class="toast"></div>
+
+<script src="demo.js"></script>
+</body>
+</html>

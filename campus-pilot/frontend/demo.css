@@ -1,0 +1,528 @@
+/* XJTLU Virtual Campus — Styles（响应式双布局：手机版 / 网页版） */
+:root {
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #2c2c2a;
+  --text-muted: #888780;
+  --border: #e0e0dc;
+  --accent: #534AB7;
+  --danger: #A32D2D;
+  --success: #3B6D11;
+  --warning: #BA7517;
+  --info: #185FA5;
+  --header-h: 48px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ==================== 应用容器（手机版：全屏 App） ==================== */
+#app {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  background: var(--bg);
+  position: relative;
+}
+#app-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* ===== 手机版顶栏 ===== */
+.app-header {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  min-height: var(--header-h);
+  flex-shrink: 0;
+  z-index: 5;
+}
+.app-header-title { font-size: 17px; font-weight: 600; }
+.app-header-back { font-size: 22px; cursor: pointer; padding: 4px; }
+.app-header-action { font-size: 14px; color: var(--accent); cursor: pointer; }
+
+#page-container {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  min-height: 0;
+}
+
+/* ===== 手机版底部 Tab 栏 ===== */
+.tab-bar {
+  display: flex;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 6px 0;
+  padding-bottom: calc(6px + env(safe-area-inset-bottom));
+  flex-shrink: 0;
+}
+.tab-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.tab-item.active { color: var(--accent); }
+.tab-icon { font-size: 20px; margin-bottom: 2px; }
+.tab-label { font-size: 10px; }
+
+/* ===== 网页版元素（默认隐藏，桌面端显示） ===== */
+#desktop-topbar, #desktop-sidebar { display: none; }
+
+/* Pages */
+.page-content { display: none; padding: 0; }
+.page-content.sub-page {
+  background: var(--bg);
+  min-height: 100%;
+  padding-bottom: 40px;
+}
+
+/* Feed */
+.feed-header-banner {
+  background: linear-gradient(135deg, var(--accent), #7c6cf0);
+  color: #fff; padding: 24px 20px; text-align: center;
+}
+.feed-banner-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.feed-banner-sub { font-size: 13px; opacity: 0.9; }
+
+.search-bar {
+  margin: 12px 16px; padding: 10px 14px;
+  background: var(--card); border-radius: 10px;
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--border); cursor: pointer;
+}
+.search-icon { font-size: 16px; }
+.search-placeholder { color: var(--text-muted); font-size: 14px; }
+
+.post-list { padding: 0 16px; }
+.post-card {
+  background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+  padding: 16px; margin-bottom: 12px; cursor: pointer;
+}
+.post-card:hover { border-color: var(--accent); }
+.post-card-title { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+.post-card-content { font-size: 13px; color: var(--text); line-height: 1.5; margin-bottom: 10px; }
+.post-card-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-muted); }
+.post-card-actions { display: flex; gap: 16px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.post-action { font-size: 12px; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; gap: 4px; }
+
+.floating-btn {
+  position: fixed; bottom: 90px; right: 20px;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--accent); color: #fff; border: none;
+  font-size: 20px; cursor: pointer; box-shadow: 0 4px 12px rgba(83,74,183,0.4);
+  display: flex; align-items: center; justify-content: center; z-index: 5;
+}
+
+/* Academic */
+.academic-tabs { display: flex; background: var(--card); border-bottom: 1px solid var(--border); }
+.academic-tab {
+  flex: 1; padding: 12px; text-align: center; font-size: 13px;
+  cursor: pointer; color: var(--text-muted); border-bottom: 2px solid transparent;
+}
+.academic-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+
+.material-item, .question-item, .professor-card {
+  background: var(--card); border-radius: 10px; border: 1px solid var(--border);
+  padding: 14px; margin: 10px 16px; cursor: pointer;
+}
+
+/* 课程资料：以一换一 */
+.quota-banner {
+  margin: 12px 16px 0; padding: 10px 14px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff; border-radius: 10px; font-size: 13px;
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: pointer; box-shadow: 0 2px 8px rgba(102,126,234,0.35);
+}
+.quota-banner b { font-size: 15px; }
+.quota-link { opacity: 0.95; font-weight: 600; }
+.material-search {
+  width: calc(100% - 32px); box-sizing: border-box; border: 1px solid var(--border);
+  font-size: 14px; color: var(--text); outline: none;
+}
+.material-search:focus { border-color: var(--accent); }
+.material-item { display: flex; flex-direction: column; position: relative; }
+.material-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; padding-right: 70px; }
+.material-meta { font-size: 12px; color: var(--text-muted); }
+.material-dl-btn {
+  position: absolute; top: 12px; right: 12px;
+  padding: 5px 12px; border-radius: 16px; border: none;
+  background: var(--accent); color: #fff; font-size: 12px; cursor: pointer;
+}
+.material-dl-btn:disabled { background: var(--border); color: var(--text-muted); cursor: default; }
+.share-resource-btn {
+  display: block; width: calc(100% - 32px); margin: 16px auto 24px;
+  padding: 12px; border-radius: 10px; border: 1.5px dashed var(--accent);
+  background: transparent; color: var(--accent);
+  font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.share-resource-btn:hover { background: rgba(83,74,183,0.06); }
+
+/* 弹窗 */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center; z-index: 100;
+  padding: 24px;
+}
+.modal-box {
+  background: var(--card); border-radius: 16px; padding: 20px;
+  width: 100%; max-width: 380px; max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+.modal-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; text-align: center; }
+.modal-rules { margin-bottom: 14px; }
+.rule-item {
+  padding: 9px 12px; border-radius: 8px; background: var(--bg);
+  font-size: 13px; margin-bottom: 8px; line-height: 1.5;
+}
+.modal-unlock-tip { text-align: center; color: var(--accent); font-size: 13px; margin-bottom: 12px; font-weight: 600; }
+.share-tip {
+  text-align: center; font-size: 13px; color: var(--accent);
+  background: rgba(83,74,183,0.08); padding: 8px; border-radius: 8px; margin-bottom: 10px;
+}
+.share-file-name { font-size: 12px; color: var(--text-muted); margin-top: 6px; word-break: break-all; }
+
+/* Events */
+.events-banner {
+  background: linear-gradient(135deg, #FC5C7D, #6A82FB);
+  color: #fff; padding: 24px 20px;
+}
+.events-banner-title { font-size: 20px; font-weight: 700; }
+.events-banner-sub { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+.event-card {
+  background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+  padding: 16px; margin: 10px 16px; display: flex; gap: 12px; cursor: pointer;
+}
+.event-date-badge {
+  width: 50px; height: 50px; border-radius: 10px;
+  background: var(--accent); color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.event-date-day { font-size: 18px; font-weight: 700; line-height: 1; }
+.event-date-month { font-size: 10px; opacity: 0.9; }
+.event-info { flex: 1; }
+.event-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+.event-detail { font-size: 12px; color: var(--text-muted); }
+.event-register-btn {
+  padding: 6px 14px; border-radius: 20px; border: none;
+  background: var(--accent); color: #fff; font-size: 12px; cursor: pointer;
+  margin-top: 8px; display: inline-block;
+}
+
+/* Treehole */
+.treehole-header {
+  background: linear-gradient(135deg, #0B7320, #2DA84D);
+  color: #fff; padding: 24px 20px;
+}
+.treehole-title { font-size: 20px; font-weight: 700; }
+.treehole-sub { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+.treehole-post {
+  background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+  padding: 16px; margin: 10px 16px;
+}
+.treehole-post-content { font-size: 14px; line-height: 1.6; }
+.treehole-post-meta { display: flex; gap: 12px; font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+.treehole-fab { background: #0B7320; box-shadow: 0 4px 12px rgba(11,115,32,0.4); }
+
+/* Profile */
+.profile-header {
+  background: var(--card); padding: 24px 20px;
+  display: flex; align-items: center; gap: 14px; border-bottom: 1px solid var(--border);
+}
+.profile-avatar { font-size: 48px; }
+.profile-info { flex: 1; }
+.profile-name { font-weight: 700; font-size: 18px; }
+.profile-email { font-size: 12px; color: var(--text-muted); }
+.profile-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.profile-edit {
+  padding: 6px 14px; border: 1px solid var(--border); border-radius: 20px;
+  font-size: 12px; cursor: pointer;
+}
+
+.profile-stats {
+  display: flex; background: var(--card); border-bottom: 1px solid var(--border);
+}
+.profile-stat {
+  flex: 1; text-align: center; padding: 16px; cursor: pointer;
+}
+.profile-stat-num { font-size: 22px; font-weight: 700; }
+.profile-stat-label { font-size: 11px; color: var(--text-muted); }
+
+.profile-menu { padding: 10px 0; }
+.profile-menu-item {
+  display: flex; align-items: center; padding: 14px 20px;
+  background: var(--card); border-bottom: 1px solid var(--border); cursor: pointer;
+}
+.menu-icon { font-size: 18px; margin-right: 12px; }
+.menu-text { flex: 1; font-size: 14px; }
+.menu-badge {
+  background: var(--danger); color: #fff; border-radius: 10px;
+  padding: 2px 7px; font-size: 11px; margin-right: 8px;
+}
+.menu-arrow { color: var(--text-muted); font-size: 18px; }
+
+/* Login / Register */
+.login-logo { text-align: center; padding: 60px 20px 30px; }
+.login-logo-circle {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--accent); color: #fff; font-size: 14px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.login-logo-text { font-size: 22px; font-weight: 700; }
+.login-logo-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.login-form { padding: 0 24px; max-width: 480px; margin: 0 auto; }
+.form-group { margin-bottom: 16px; }
+.form-label { font-size: 13px; font-weight: 500; margin-bottom: 6px; display: block; }
+.form-input {
+  width: 100%; padding: 12px; border: 1px solid var(--border);
+  border-radius: 10px; font-size: 14px; outline: none;
+}
+.form-input:focus { border-color: var(--accent); }
+.code-row { display: flex; gap: 8px; }
+.code-input { flex: 1; }
+.code-btn {
+  padding: 12px 16px; border: 1px solid var(--accent); background: transparent;
+  color: var(--accent); border-radius: 10px; cursor: pointer; font-size: 13px; white-space: nowrap;
+}
+.primary-btn {
+  width: 100%; padding: 14px; background: var(--accent); color: #fff;
+  border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer;
+}
+.login-switch { text-align: center; margin-top: 12px; cursor: pointer; font-size: 13px; color: var(--accent); }
+.login-footer { text-align: center; margin-top: 24px; font-size: 13px; color: var(--text-muted); }
+.link-text { color: var(--accent); cursor: pointer; }
+
+/* Settings */
+.settings-group { margin: 10px 16px; }
+.settings-group-title { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.settings-item {
+  background: var(--card); padding: 14px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--border); cursor: pointer;
+}
+.settings-item:first-child { border-radius: 10px 10px 0 0; }
+.settings-item:last-child { border-radius: 0 0 10px 10px; border-bottom: none; }
+.settings-value { font-size: 12px; color: var(--text-muted); }
+.settings-toggle { display: flex; background: var(--border); border-radius: 6px; overflow: hidden; }
+.toggle-option { padding: 4px 12px; font-size: 12px; cursor: pointer; }
+.toggle-option.active { background: var(--accent); color: #fff; }
+.settings-switch {
+  width: 44px; height: 24px; border-radius: 12px; position: relative; cursor: pointer;
+}
+.settings-switch.on { background: var(--accent); }
+.settings-switch.off { background: #ccc; }
+.settings-switch::after {
+  content: ''; width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; position: absolute; top: 2px;
+  transition: left 0.2s;
+}
+.settings-switch.on::after { left: 22px; }
+.settings-switch.off::after { left: 2px; }
+
+/* Post Create */
+.create-post { padding: 16px; }
+.create-post-user { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.create-post-avatar { font-size: 36px; }
+.create-post-name { font-weight: 600; font-size: 14px; }
+.create-post-visibility { font-size: 12px; color: var(--text-muted); }
+.create-post-anon { margin-left: auto; font-size: 12px; cursor: pointer; }
+.create-post-title-input {
+  width: 100%; padding: 12px; border: 1px solid var(--border);
+  border-radius: 10px; font-size: 14px; outline: none; margin-bottom: 12px;
+}
+.create-post-textarea {
+  width: 100%; height: 150px; padding: 12px; border: 1px solid var(--border);
+  border-radius: 10px; font-size: 14px; outline: none; resize: none;
+  font-family: inherit;
+}
+.create-post-tools { display: flex; gap: 12px; margin: 12px 0; }
+.create-post-tool {
+  padding: 8px 14px; border: 1px solid var(--border); border-radius: 20px;
+  font-size: 12px; cursor: pointer;
+}
+
+/* Toast */
+.toast {
+  position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);
+  padding: 12px 18px; border-radius: 12px; background: #333; color: #fff;
+  font-size: 13px; text-align: center; opacity: 0;
+  transition: opacity 0.3s; pointer-events: none; z-index: 100;
+  max-width: 90vw; white-space: nowrap;
+}
+.toast.show { opacity: 0.9; }
+
+/* ===== 真实图片动态 ===== */
+.post-card-images {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.post-card-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+.post-image-preview {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.post-image-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+}
+
+/* ==================== 网页版布局（桌面端 ≥992px） ==================== */
+@media (min-width: 992px) {
+  body { background: #edeef2; }
+
+  #app { max-width: none; }
+
+  /* 网页版顶栏 */
+  #desktop-topbar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 60px;
+    padding: 0 28px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    z-index: 10;
+  }
+  .dt-logo { display: flex; align-items: center; gap: 10px; }
+  .dt-logo-badge {
+    background: var(--accent); color: #fff; font-weight: 700;
+    font-size: 13px; padding: 6px 10px; border-radius: 8px; letter-spacing: 0.5px;
+  }
+  .dt-logo-text { font-size: 16px; font-weight: 700; }
+
+  .dt-search {
+    flex: 1; max-width: 420px;
+    display: flex; align-items: center; gap: 8px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 24px; padding: 9px 16px;
+    font-size: 13px; color: var(--text-muted); cursor: pointer;
+  }
+  .dt-search:hover { border-color: var(--accent); }
+
+  .dt-user { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+  .dt-user-avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7c6cf0);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .dt-user-info { line-height: 1.2; }
+  .dt-user-name { font-size: 13px; font-weight: 600; }
+  .dt-user-mail { font-size: 11px; color: var(--text-muted); }
+  .dt-login-btn {
+    padding: 8px 18px; background: var(--accent); color: #fff;
+    border: none; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer;
+  }
+  .dt-login-btn:hover { opacity: 0.9; }
+
+  /* 网页版主体：侧边栏 + 内容区 */
+  #app-body { flex-direction: row; }
+
+  #desktop-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 216px;
+    flex-shrink: 0;
+    background: var(--card);
+    border-right: 1px solid var(--border);
+    padding: 16px 12px;
+    overflow-y: auto;
+  }
+  .nav-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 14px; margin-bottom: 4px;
+    border-radius: 10px; cursor: pointer;
+    font-size: 14px; color: var(--text);
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-item:hover { background: #f1f0fa; }
+  .nav-item.active { background: #eceafc; color: var(--accent); font-weight: 600; }
+  .nav-ico { font-size: 18px; }
+  .sidebar-foot {
+    margin-top: auto; padding: 14px 14px 6px;
+    font-size: 11px; color: var(--text-muted);
+  }
+
+  /* 手机版顶栏 / 底栏隐藏 */
+  .app-header, .tab-bar { display: none !important; }
+
+  /* 内容区 */
+  #page-container { background: var(--bg); }
+
+  /* 主页面内容居中限宽 */
+  #page-feed, #page-academic, #page-events, #page-treehole, #page-profile {
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  /* Feed 双列网格 */
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+  }
+  .post-card { margin-bottom: 0; }
+  .feed-header-banner { border-radius: 0 0 16px 16px; margin: 0 20px; }
+  .search-bar { margin: 20px 20px 0; }
+
+  /* 学术 / 活动 / 树洞 列表限宽 */
+  .academic-tabs { border-radius: 12px; margin: 20px 20px 0; overflow: hidden; }
+  .material-list, .question-list, .professor-list, .event-list, .treehole-list {
+    padding: 20px;
+  }
+  .material-item, .question-item, .professor-card {
+    margin: 10px 0;
+  }
+  .event-card { margin: 10px 0; }
+  .treehole-post { margin: 10px 0; }
+  .profile-header, .profile-stats, .profile-menu { border-radius: 12px; margin: 20px 20px 0; overflow: hidden; }
+  .profile-menu { margin-bottom: 20px; }
+
+  /* 子页面居中卡片 */
+  .sub-page { padding: 40px 20px; }
+  .login-logo { padding: 40px 20px 30px; }
+
+  .floating-btn { bottom: 32px; right: 32px; }
+
+  .toast { bottom: 40px; }
+}
